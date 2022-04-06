@@ -1,7 +1,35 @@
+:root{
+    --gray:rgb(69, 69, 69);
+}
+
 * {
-    font-family: "Helvetica", "Verdana", "sanss-serif";
+    font-family: -apple-system, "Helvetica", "sans-serif";
 }
 
 .logo {
     font-size: 64px;
+    font-family:'Georgia';
+    background-color: var(--gray);
+    color: rgb(255, 255, 255);
+}
+
+#board {
+    text-align: center;
+}
+
+#board img{
+    height: auto;
+    width: 550px;
+}
+
+.login {
+    max-width: 100px;
+}
+
+#navigation {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(4, auto);
+    background-color: var(--gray);
+    color:rgb(255, 255, 255);
 }
