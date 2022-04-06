@@ -2,12 +2,21 @@
     --gray:rgb(69, 69, 69);
 }
 
+body {
+    margin: 0;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+}
+
 * {
     font-family: -apple-system, "Helvetica", "sans-serif";
 }
 
 a {
     color: white;
+    text-decoration-line: none;
 }
 
 #logo{
@@ -19,6 +28,7 @@ a {
 
 #board {
     text-align: center;
+    margin: 10px;
 }
 
 #board img{
@@ -36,4 +46,13 @@ a {
     grid-template-columns: repeat(4, auto);
     background-color: var(--gray);
     color:rgb(255, 255, 255);
+    margin: 0;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+}
+
+.menu-item-container {
+    align-items: center;
 }
