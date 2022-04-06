@@ -24,6 +24,11 @@ a {
     font-family:'Georgia';
     background-color: var(--gray);
     color: rgb(255, 255, 255);
+    max-width: 400px;
+}
+
+#logo-container{
+    max-width: 400px;
 }
 
 #board {
@@ -43,7 +48,7 @@ a {
 #navigation {
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(5, auto);
     background-color: var(--gray);
     color:rgb(255, 255, 255);
     margin: 0;
@@ -53,6 +58,7 @@ a {
         margin-left: 0px;
 }
 
-.menu-item-container {
-    align-items: center;
+.menu-item {
+    text-align: center;
+    padding-top: 60px;
 }
