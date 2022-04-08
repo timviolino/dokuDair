@@ -2,16 +2,9 @@
     --gray:rgb(69, 69, 69);
 }
 
-body {
-    margin: 0;
-        margin-top: 0px;
-        margin-right: 0px;
-        margin-bottom: 0px;
-        margin-left: 0px;
-}
-
 * {
     font-family: -apple-system, "Helvetica", "sans-serif";
+    margin: 0;
 }
 
 a {
@@ -22,13 +15,7 @@ a {
 #logo{
     font-size: 64px;
     font-family:'Georgia';
-    background-color: var(--gray);
     color: rgb(255, 255, 255);
-    max-width: 400px;
-}
-
-#logo-container{
-    max-width: 400px;
 }
 
 #board {
@@ -41,26 +28,22 @@ a {
     width: 550px;
 }
 
-.login {
+.credential-bar {
     max-width: 100px;
 }
 
 #navigation {
-    display: grid;
+    display: flex;
     grid-template-rows: 1fr;
     grid-template-columns: repeat(5, auto);
     background-color: var(--gray);
     color:rgb(255, 255, 255);
-    margin: 0;
-        margin-top: 0px;
-        margin-right: 0px;
-        margin-bottom: 0px;
-        margin-left: 0px;
 }
 
 .menu-item {
+    font-size: 24px;
     text-align: center;
-    padding-top: 60px;
+    margin: 0 auto;
 }
 
 .square {
