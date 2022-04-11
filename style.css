@@ -12,38 +12,48 @@ a {
     text-decoration-line: none;
 }
 
-#logo{
-    font-size: 64px;
-    font-family:'Georgia';
-    color: rgb(255, 255, 255);
-}
-
-#board {
-    text-align: center;
-    margin: 10px;
-}
-
-#board img{
-    height: auto;
-    width: 550px;
-}
-
-.credential-bar {
-    max-width: 100px;
-}
-
-#navigation {
+body {
     display: flex;
-    grid-template-rows: 1fr;
-    grid-template-columns: repeat(5, auto);
+}
+
+#nav-bar {
     background-color: var(--gray);
-    color:rgb(255, 255, 255);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 14.5rem;
+}
+
+#logo {
+    color: white;
+    font-size: 48px;
+    font-family:'Georgia';
+    text-align:center;
 }
 
 .menu-item {
     font-size: 24px;
     text-align: center;
     margin: auto auto;
+}
+
+.credentials
+
+.credential-input {
+    max-width: 100px;
+}
+
+#board {
+    display: inline;
+    margin: 10px;
+    text-align: center;
+}
+
+#board img{
+    display: inline;
+    height: auto;
+    width: 550px;
 }
 
 .square {
