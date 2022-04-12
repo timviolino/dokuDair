@@ -1,5 +1,6 @@
 :root{
-    --gray:rgb(69, 69, 69);
+    --nav-background:white;
+    --nav-text: black;
 }
 
 * {
@@ -8,7 +9,6 @@
 }
 
 a {
-    color: white;
     text-decoration-line: none;
 }
 
@@ -17,40 +17,36 @@ body {
 }
 
 #nav-bar {
-    background-color: var(--gray);
-    color: white;
+    background-color: var(--nav-background);
     display: flex;
     flex-direction: column;
     height: 100vh;
-    width: 14.5rem;
+    width: 18;
 }
 
 #logo {
-    color: white;
     font-size: 48px;
-    font-family:'Georgia';
-    text-align:center;
+    font-family: 'Georgia';
 }
 
 .menu-item {
+    color: var(--nav-text);
+    flex: 1;
     font-size: 24px;
     text-align: center;
-    margin: auto auto;
 }
-
-.credentials
 
 .credential-input {
     max-width: 100px;
 }
 
-#board {
+#board-container {
     display: inline;
     margin: 10px;
     text-align: center;
 }
 
-#board img{
+#board {
     display: inline;
     height: auto;
     width: 550px;
