@@ -1,17 +1,18 @@
 :root{
     --logo-background: rgb(247, 223, 223);
     --nav-background: rgb(250, 241, 241);
-    --nav-text: black;
+    --text: rgb(69, 69, 69);
 }
 
 * {
     font-family: -apple-system, "Helvetica", "sans-serif";
     margin: 0;
+    color: var(--text);
 }
 
 a {
     text-decoration-line: none;
-    color: var(--nav-text);
+    color: var(--text);
 }
 
 body {
@@ -24,7 +25,7 @@ body {
 
 .container#top {
     align-items: center;
-    justify-content:flex-start;
+    justify-content: flex-start;
     background-color: var(--logo-background);
     height: 6vh;
 }
@@ -45,6 +46,7 @@ body {
 .container#nav {
     background-color: var(--nav-background);
     flex-direction: column;
+    justify-content: center;
     height: 94vh;
     width: 220px;
     gap: 50px;
@@ -58,6 +60,11 @@ body {
 
 p#credentials {
     font-size: 18px;
+}
+
+.container#credentials {
+    margin-right: 20px;
+    gap: 20px;
 }
 
 .credential-input {
@@ -76,8 +83,8 @@ p#credentials {
 }
 
 img.board {
-    height: auto;
-    width: 550px;
+    height: 588px;
+    width: auto;
 }
 
 .container#opponent {
@@ -87,5 +94,15 @@ img.board {
     background-color: var(--logo-background);
     padding: 10px;
     height: 240px;
-    justify-content: center;
 }
+
+.icon.user {
+    width: 72px;
+    height: auto;
+}
+
+#opponent > h3 {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
