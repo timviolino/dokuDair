@@ -5,9 +5,9 @@
         <title>DokuDair</title>
         <link rel="stylesheet" href="style.css">
     </head>
-    <body>
-        <div id="nav-bar">
-            <a id="logo" class="menu-item" href="index.html">DokuDair</a>
+    <body class="container">
+        <div class="container" id="nav">
+            <a class="menu-item" id="logo" href="index.html">DokuDair</a>
             <a class="menu-item" href="./pages/about.html">about</a>
             <a class="menu-item" href="./pages/history.html">history</a>
             <a class="menu-item" href="./pages/chat.html">chat</a>
@@ -18,10 +18,13 @@
                 <button>Free Sign Up</button>
             </div>
         </div>
-        <div id="board-container">
-            <img id="board" src="./img/sudoku.svg" alt="sudoku">
+        <div class="container" id="board">
+            <img class="board" src="./img/sudoku.svg" alt="sudoku">
+            <div class="board container" id="opponent">
+                <h3>Opponent Stats</h3>
+                <p><strong>User</strong> Xx_cookielover_xX</p>
+                <p>69% complete...</p>
+            </div>
         </div>
-        <input class="square">
-        <button>Start Game</button>
     </body>
 </html>

@@ -1,5 +1,6 @@
 :root{
-    --nav-background:white;
+    --logo-background: rgb(247, 223, 223);
+    --nav-background: rgb(250, 241, 241);
     --nav-text: black;
 }
 
@@ -8,25 +9,24 @@
     margin: 0;
 }
 
-a {
-    text-decoration-line: none;
-}
-
-body {
+.container {
     display: flex;
+    gap: 50px;
 }
 
-#nav-bar {
+.container#nav {
     background-color: var(--nav-background);
-    display: flex;
     flex-direction: column;
     height: 100vh;
     width: 18;
+    gap: 50px;
 }
 
 #logo {
     font-size: 48px;
     font-family: 'Georgia';
+    background-color: var(--logo-background);
+    flex: none;
 }
 
 .menu-item {
@@ -34,22 +34,36 @@ body {
     flex: 1;
     font-size: 24px;
     text-align: center;
+    text-decoration-line: none;
 }
 
 .credential-input {
     max-width: 100px;
 }
 
-#board-container {
-    display: inline;
-    margin: 10px;
-    text-align: center;
+.container#board {
+    margin: 50px;
+    justify-content: center;
+    align-items: center;
 }
 
-#board {
-    display: inline;
+.board {
+    flex: auto;
+}
+
+img.board {
     height: auto;
     width: 550px;
+}
+
+.container#opponent {
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 16px;
+    background-color: var(--logo-background);
+    padding: 10px;
+    height: 240px;
+    justify-content: center;
 }
 
 .square {
@@ -57,5 +71,5 @@ body {
     border-radius: 0px;
     border-style: none;
     font-size: 32px;
-    text-align:center;
+    text-align: center;
 }
