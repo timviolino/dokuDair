@@ -9,42 +9,66 @@
     margin: 0;
 }
 
-.container {
-    display: flex;
-    gap: 50px;
+a {
+    text-decoration-line: none;
+    color: var(--nav-text);
 }
 
-.container#nav {
-    background-color: var(--nav-background);
+body {
     flex-direction: column;
-    height: 100vh;
-    width: 18;
-    gap: 50px;
+}
+
+.container {
+    display: flex;
+}
+
+.container#top {
+    align-items: center;
+    justify-content:flex-start;
+    background-color: var(--logo-background);
+    height: 6vh;
 }
 
 #logo {
     font-size: 48px;
     font-family: 'Georgia';
-    background-color: var(--logo-background);
+    width: 220px;
+    text-align: center;
     flex: none;
 }
 
+.container.spacer {
+    height: inherit;
+    flex: 1;
+}
+
+.container#nav {
+    background-color: var(--nav-background);
+    flex-direction: column;
+    height: 94vh;
+    width: 220px;
+    gap: 50px;
+}
+
 .menu-item {
-    color: var(--nav-text);
     flex: 1;
     font-size: 24px;
     text-align: center;
-    text-decoration-line: none;
+}
+
+p#credentials {
+    font-size: 18px;
 }
 
 .credential-input {
-    max-width: 100px;
+    max-width: 80px;
 }
 
 .container#board {
-    margin: 50px;
+    padding: 82px;
     justify-content: center;
     align-items: center;
+    gap:50px;
 }
 
 .board {
@@ -64,12 +88,4 @@ img.board {
     padding: 10px;
     height: 240px;
     justify-content: center;
-}
-
-.square {
-    width: 32px;
-    border-radius: 0px;
-    border-style: none;
-    font-size: 32px;
-    text-align: center;
 }
