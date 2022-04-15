@@ -1,6 +1,6 @@
 :root{
-    --logo-background: rgb(247, 223, 223);
-    --nav-background: rgb(250, 241, 241);
+    --dark-background: rgb(247, 223, 223);
+    --light-background: rgb(250, 241, 241);
     --text: rgb(69, 69, 69);
 }
 
@@ -26,7 +26,7 @@ body {
 .container#top {
     align-items: center;
     justify-content: flex-start;
-    background-color: var(--logo-background);
+    background-color: var(--dark-background);
     height: 6vh;
 }
 
@@ -44,7 +44,7 @@ body {
 }
 
 .container#nav {
-    background-color: var(--nav-background);
+    background-color: var(--light-background);
     flex-direction: column;
     justify-content: center;
     height: 94vh;
@@ -91,7 +91,7 @@ img.board {
     flex-direction: column;
     border: 1px solid black;
     border-radius: 16px;
-    background-color: var(--logo-background);
+    background-color: var(--light-background);
     padding: 10px;
     height: 240px;
 }
@@ -102,7 +102,11 @@ img.board {
 }
 
 #opponent > h3 {
+    background-color: var(--dark-background);
     text-align: center;
-    margin-bottom: 24px;
+    margin: -10px -10px 24px -10px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    padding: 10px;
 }
 
