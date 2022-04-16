@@ -7,6 +7,7 @@
     --dark-color: rgb(250, 220, 220);
     --very-dark-color: rgb(250, 190, 190);
     --text: rgb(69, 69, 69);
+    --opponent-card-thickness: 12px;
 }
 
 /* | General Declarations  */
@@ -30,9 +31,9 @@ body {
     display: flex;
 }
 
-/* || Horizontal Navigation Bar */
+/* || Top Navigation Bar */
 
-.container#top {
+#nav-top {
     align-items: center;
     justify-content: flex-start;
     background-color: var(--dark-color);
@@ -40,34 +41,30 @@ body {
 }
 
 #logo {
-    font-size: 48px;
+    font-size: 4vw;
     font-family: 'Georgia';
-    width: 16vw;
+    width: auto;
     text-align: center;
     flex: none;
 }
 
-.container.spacer {
+#nav-top > .spacer {
     height: inherit;
     flex: 1;
 }
 
-p#credentials {
-    font-size: 18px;
-}
-
-.container#credentials {
+#credentials {
     margin-right: 20px;
     gap: 20px;
 }
 
-.credential-input {
+#credentials > input {
     max-width: 80px;
 }
 
-/* || Vertical Navigation Bar */
+/* || Side Navigation Bar */
 
-.container#nav {
+#nav-side {
     background-color: var(--light-color);
     flex-direction: column;
     justify-content: center;
@@ -101,7 +98,7 @@ p#credentials {
 /* ||| Opponent Completion Card */
 
 .opponent {
-    padding: 12px;
+    padding: var(--opponent-card-thickness);
     width: 240px;
     flex: 1;
 }
@@ -111,12 +108,13 @@ p#credentials {
     align-items: center;
     border: 1px solid var(--text);
     background-color: var(--light-color);
-    border-radius: 12px;
+    border-radius: calc(1.5*var(--opponent-card-thickness));
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 h3.opponent {
     background-color: var(--dark-color);
-    margin: -12px -12px 12px -12px;
+    margin: -12px -12px 0 -12px;
     border-top-left-radius: inherit;
     border-top-right-radius: inherit;
 }
@@ -131,16 +129,12 @@ h3.opponent {
     height: auto;
 }
 
-.completion {
-    border-radius: 6px;
-}
-
 .container.completion {
-    flex: 0;
-    width: 92%;
+    box-sizing: border-box;
     background-color: var(--dark-color);
     align-items: center;
     gap: 6px;
+    border-radius: calc(0.5*var(--opponent-card-thickness));
 }
 
 p.completion {
@@ -160,7 +154,7 @@ p.completion {
 }
 
 .completion.bar.outer {
-    flex: 1;
+    flex:1;
     background-color: var(--very-dark-color);
 }
 
