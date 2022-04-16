@@ -1,8 +1,15 @@
+/* | Global Constants  */
+
 :root{
-    --dark-background: rgb(247, 223, 223);
-    --light-background: rgb(250, 241, 241);
+    --background: white;
+    --light-color: rgb(250, 240, 240);
+    --med-color: rgb(250, 230, 230);
+    --dark-color: rgb(250, 220, 220);
+    --very-dark-color: rgb(250, 190, 190);
     --text: rgb(69, 69, 69);
 }
+
+/* | General Declarations  */
 
 * {
     font-family: -apple-system, "Helvetica", "sans-serif";
@@ -23,17 +30,19 @@ body {
     display: flex;
 }
 
+/* || Horizontal Navigation Bar */
+
 .container#top {
     align-items: center;
     justify-content: flex-start;
-    background-color: var(--dark-background);
+    background-color: var(--dark-color);
     height: 6vh;
 }
 
 #logo {
     font-size: 48px;
     font-family: 'Georgia';
-    width: 220px;
+    width: 16vw;
     text-align: center;
     flex: none;
 }
@@ -41,21 +50,6 @@ body {
 .container.spacer {
     height: inherit;
     flex: 1;
-}
-
-.container#nav {
-    background-color: var(--light-background);
-    flex-direction: column;
-    justify-content: center;
-    height: 94vh;
-    width: 220px;
-    gap: 50px;
-}
-
-.menu-item {
-    flex: 1;
-    font-size: 24px;
-    text-align: center;
 }
 
 p#credentials {
@@ -71,42 +65,102 @@ p#credentials {
     max-width: 80px;
 }
 
-.container#board {
+/* || Vertical Navigation Bar */
+
+.container#nav {
+    background-color: var(--light-color);
+    flex-direction: column;
+    justify-content: center;
+    height: 94vh;
+    width: 16vw;
+    gap: 50px;
+}
+
+.menu-item {
+    flex: 1;
+    font-size: 24px;
+    text-align: center;
+}
+
+/* || Board */
+
+#board {
+    flex: 1;
     padding: 82px;
     justify-content: center;
     align-items: center;
-    gap:50px;
+    gap: 50px;
 }
 
-.board {
+#board > img {
     flex: auto;
-}
-
-img.board {
-    height: 588px;
+    height: 90%;
     width: auto;
 }
 
-.container#opponent {
-    flex-direction: column;
-    border: 1px solid black;
-    border-radius: 16px;
-    background-color: var(--light-background);
-    padding: 10px;
-    height: 240px;
+/* ||| Opponent Completion Card */
+
+.opponent {
+    padding: 12px;
+    width: 240px;
+    flex: 1;
 }
 
-.icon.user {
+#opponent-card {
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid var(--text);
+    background-color: var(--light-color);
+    border-radius: 12px;
+}
+
+h3.opponent {
+    background-color: var(--dark-color);
+    margin: -12px -12px 12px -12px;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
+
+.user {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user > img {
     width: 72px;
     height: auto;
 }
 
-#opponent > h3 {
-    background-color: var(--dark-background);
-    text-align: center;
-    margin: -10px -10px 24px -10px;
-    border-top-left-radius: 16px;
-    border-top-right-radius: 16px;
-    padding: 10px;
+.completion {
+    border-radius: 6px;
+}
+
+.container.completion {
+    flex: 0;
+    width: 92%;
+    background-color: var(--dark-color);
+    align-items: center;
+    gap: 6px;
+}
+
+p.completion {
+    font-weight: bold;
+    padding: 6px;
+    background-color: var(--dark-color);
+}
+
+.completion.bar {
+    height: 12px;
+    border-radius: 12px;
+}
+
+.completion.bar.inner {
+    background-color: var(--background);
+    width: 69%;
+}
+
+.completion.bar.outer {
+    flex: 1;
+    background-color: var(--very-dark-color);
 }
 

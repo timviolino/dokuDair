@@ -22,12 +22,19 @@
                 <a class="menu-item" href="./pages/chat.html">chat</a>
             </div>
             <div class="container" id="board">
-                <img class="board" src="./img/sudoku.svg" alt="Sudoku Board">
-                <div class="board container" id="opponent">
-                    <h3>Opponent Stats</h3>
-                    <p><strong>User</strong> Xx_cookielover_xX</p>
-                    <img class="icon user" src="./img/charlie.png" alt="User">
-                    <p>69% complete...</p>
+                <img src="./img/sudoku.svg" alt="Sudoku Board">
+                <div class="container opponent" id="opponent-card">
+                    <h3 class="opponent">Opponent</h3>
+                    <div class="container opponent user">
+                        <img src="./img/charlie.png" alt="User">
+                        <p> Xx_cookielover_xX</p>
+                    </div>
+                    <div class="opponent container completion">
+                        <p class="completion">69%</p>
+                        <div class="completion bar outer">
+                            <div class="completion bar inner"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
