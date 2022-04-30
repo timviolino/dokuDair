@@ -5,14 +5,14 @@
   --color-med: rgb(250, 210, 210);
   --color-dark: rgb(250, 180, 180);
   --color-text: rgb(69, 69, 69);
-  --padding-large: 12px;
+  --padding-small: 12px;
+  --padding-large: 48px;
   --gap: 50px;
   --width-nav-side: 16vw;
   --height-nav-top: 6vh;
 }
 
 /* Font  */
-
 * {
   font-family: -apple-system, "Helvetica", "sans-serif";
 }
@@ -22,7 +22,7 @@ a {
 }
 
 #logo {
-  font-size: 36px;
+  font-size: 42px;
   font-family: 'Georgia';
   text-align: center;
 }
@@ -90,6 +90,10 @@ a {
   width: 100%;
 }
 
+.inflexible {
+  flex: none;
+}
+
 #nav-top {
   height: var(--height-nav-top);
 }
@@ -97,11 +101,10 @@ a {
 #logo {
   width: var(--width-nav-side);
   height: var(--height-nav-top);
-  flex: none;
 }
 
 #credentials {
-  padding: var(--padding-large);
+  padding: var(--padding-small);
   justify-content: flex-end;
   gap: 20px;
 }
@@ -110,30 +113,34 @@ a {
   max-width: 80px;
 }
 
+#content {
+  height: calc(100vh - var(--height-nav-top));
+}
+
 #nav-side {
-  flex: none;
-  height: 100%;
+  height: inherit;
   width: var(--width-nav-side);
   gap: var(--gap);
 }
 
 #board {
-  padding: 82px;
+  height: inherit;
   gap: var(--gap);
+  box-sizing: border-box;
+  padding: var(--padding-large);
 }
 
 #board > img {
-  flex: none;
-  height: calc(100vh-var(--height-nav-top));
+  flex: auto;
+  height: 80%;
   width: auto;
 }
 
 #opponent-card {
-  flex: none;
-  padding: var(--padding-large);
+  padding: var(--padding-small);
   width: 240px;
   border: 1px solid var(--color-text);
-  border-radius: calc(1.5*var(--padding-large));
+  border-radius: calc(1.5*var(--padding-small));
 }
 
 #opponent-card > h3 {
@@ -157,7 +164,7 @@ a {
   box-sizing: border-box;
   padding: inherit;
   gap: 6px;
-  border-radius: calc(0.5*var(--padding-large));
+  border-radius: calc(0.5*var(--padding-small));
 }
 
 .bar {
