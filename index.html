@@ -1,41 +1,41 @@
 <!DOCTYPE html>
 <html>
-    <head lang="en">
-        <meta charset="UTF-8">
-        <title>DokuDair</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body class="container">
-        <div class="container" id="nav-top">
-            <a id="logo" href="index.html">DokuDair</a>
-            <div class="container" id="credentials">
-                <input placeholder="Username">
-                <input placeholder="Password">
-                <button>Login</button>
+  <head lang="en">
+    <meta charset="UTF-8">
+    <title>DokuDair</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="container vertical">
+    <div class="container stretch" id="nav-top">
+      <a class="container" id="logo" href="index.html">DokuDair</a>
+      <div class="container" id="credentials">
+        <input placeholder="Username">
+        <input placeholder="Password">
+        <button>Login</button>
+      </div>
+    </div>
+    <div class="container stretch" id="content">
+      <div class="container vertical" id="nav-side">
+        <a class="menu-item" href="./pages/about.html">about</a>
+        <a class="menu-item" href="./pages/history.html">history</a>
+        <a class="menu-item" href="./pages/chat.html">chat</a>
+      </div>
+      <div class="container" id="board">
+        <img src="./img/sudoku.svg" alt="Sudoku Board">
+        <div class="container vertical" id="opponent-card">
+          <h3 class="stretch">Opponent</h3>
+          <div class="container stretch user">
+            <img src="./img/charlie.png" alt="User">
+            <p> Xx_cookielover_xX</p>
+          </div>
+          <div class="container stretch" id="completion">
+            <p>69%</p>
+            <div class="bar outer container">
+              <div class="bar inner"></div>
             </div>
+          </div>
         </div>
-        <div class="container" id="content">
-            <div class="container" id="nav-side">
-                <a class="menu-item" href="./pages/about.html">about</a>
-                <a class="menu-item" href="./pages/history.html">history</a>
-                <a class="menu-item" href="./pages/chat.html">chat</a>
-            </div>
-            <div class="container" id="board">
-                <img src="./img/sudoku.svg" alt="Sudoku Board">
-                <div class="container opponent" id="opponent-card">
-                    <h3 class="opponent">Opponent</h3>
-                    <div class="container opponent user">
-                        <img src="./img/charlie.png" alt="User">
-                        <p> Xx_cookielover_xX</p>
-                    </div>
-                    <div class="opponent container completion">
-                        <p>69%</p>
-                        <div class="completion bar outer">
-                            <div class="completion bar inner"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </body>
+      </div>
+    </div>
+  </body>
 </html>
