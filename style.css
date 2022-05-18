@@ -9,7 +9,7 @@
   --padding-large: 48px;
   --gap: 50px;
   --width-nav-side: 16vw;
-  --height-nav-top: 6vh;
+  --height-top: 6vh;
 }
 
 /* Font  */
@@ -49,25 +49,29 @@ a {
   background-color: var(--color-background);
 }
 
-#nav-side,
-#opponent-card {
+.color-light {
   background-color: var(--color-light);
 }
 
-#nav-top,
-#opponent-card > h3,
-#completion,
-#completion > p {
+.color-med,
+.menu-item:hover {
   background-color: var(--color-med);
 }
 
-#logo,
-.bar.outer {
+.color-dark {
   background-color: var(--color-dark);
 }
 
 #opponent-card {
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+#board {
+  border: 2px solid var(--color-text);
+}
+
+.section {
+  border: 1px solid var(--color-text);
 }
 
 /* Layout */
@@ -94,13 +98,13 @@ a {
   flex: none;
 }
 
-#nav-top {
-  height: var(--height-nav-top);
+#top {
+  height: var(--height-top);
 }
 
 #logo {
   width: var(--width-nav-side);
-  height: var(--height-nav-top);
+  height: var(--height-top);
 }
 
 #credentials {
@@ -113,24 +117,27 @@ a {
   max-width: 80px;
 }
 
-#content {
-  height: calc(100vh - var(--height-nav-top));
+#bottom {
+  height: calc(100vh - var(--height-top));
 }
 
 #nav-side {
   height: inherit;
   width: var(--width-nav-side);
-  gap: var(--gap);
 }
 
-#board {
+.menu-item {
+  padding: 12px;
+}
+
+#content {
   height: inherit;
   gap: var(--gap);
   box-sizing: border-box;
   padding: var(--padding-large);
 }
 
-#board > img {
+#content > img {
   flex: auto;
   height: 80%;
   width: auto;
@@ -178,4 +185,17 @@ a {
 
 .bar.inner {
   width: 69%;
+}
+
+#board {
+  flex: initial;
+  display: grid;
+  grid-template-columns: ;
+  width: 529px;
+  height: 529px;
+}
+
+/* Other */
+.menu-item {
+  transition: background-color 150ms;
 }

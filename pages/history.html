@@ -5,27 +5,22 @@
     <title>DokuDair</title>
     <link rel="stylesheet" href="../style.css">
   </head>
-
-  <body>
-    <div id="nav-bar">
-        <a id="logo" class="menu-item" href="../index.html">DokuDair</a>
+  <body class="container vertical">
+    <div class="container stretch" id="top">
+      <a class="container inflexible" id="logo" href="../index.html">DokuDair</a>
+      <div class="container" id="credentials">
+        <input placeholder="Username">
+        <input placeholder="Password">
+        <button>Login</button>
+      </div>
+    </div>
+    <div class="container stretch inflexible" id="bottom">
+      <div class="container vertical inflexible" id="nav-side">
         <a class="menu-item" href="about.html">about</a>
         <a class="menu-item" href="history.html">history</a>
         <a class="menu-item" href="chat.html">chat</a>
-        <div id="credentials" class="menu-item">
-            <p>Username: <input class="credential-input"></p>
-            <p>Password: <input class="credential-input"></p>
-            <button>Login</button>
-            <button>Free Sign Up</button>
-        </div>
+      </div>
+      <div class="container" id="content"></div>
     </div>
-    <h1>History of Sudoku</h1>
-    <p>
-        Sudoku was first created in <strong>1979</strong>! That's right, it's no ancient history... but a rather a 
-        quite <em>modern</em> production.
-    </p>
-    <p>
-        For more information see <a href="https://en.wikipedia.org/wiki/Sudoku">wikipedia</a>
-    </p>
-</body>
+  </body>
 </html>
