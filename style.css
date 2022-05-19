@@ -40,7 +40,8 @@ a {
   background-color: var(--color-background);
 }
 
-.color-light {
+.color-light,
+.cell:hover {
   background-color: var(--color-light);
 }
 
