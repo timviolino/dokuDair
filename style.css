@@ -1,12 +1,12 @@
 /* Global Constants  */
 :root{
-  --color-background: white;
-  --color-light: rgb(250, 240, 240);
-  --color-med: rgb(250, 210, 210);
-  --color-dark: rgb(250, 180, 180);
-  --color-text: rgb(69, 69, 69);
-  --padding-small: 12px;
-  --padding-large: 48px;
+  --clr-background: white;
+  --clr-light: rgb(250, 240, 240);
+  --clr-med: rgb(250, 210, 210);
+  --clr-dark: rgb(250, 180, 180);
+  --clr-text: rgb(69, 69, 69);
+  --pad-sm: 12px;
+  --pad-lg: 48px;
   --gap: 50px;
   --width-nav-side: 16vw;
   --height-top: 6vh;
@@ -31,27 +31,31 @@ a {
   text-align: center;
 }
 
+.cell > p {
+  font-size: 24px;
+}
+
 /* ||||||||| Doku Color Schemes - text, background, shadows ||||||||| */
 * {
-  color: var(--color-text);
+  color: var(--clr-text);
 }
 
 .bar.inner {
-  background-color: var(--color-background);
+  background-color: var(--clr-background);
 }
 
-.color-light,
+.clr-light,
 .cell:hover {
-  background-color: var(--color-light);
+  background-color: var(--clr-light);
 }
 
-.color-med,
+.clr-med,
 .menu-item:hover {
-  background-color: var(--color-med);
+  background-color: var(--clr-med);
 }
 
-.color-dark {
-  background-color: var(--color-dark);
+.clr-dark {
+  background-color: var(--clr-dark);
 }
 
 #opponent-card {
@@ -59,99 +63,32 @@ a {
 }
 
 #board {
-  border: 2px solid var(--color-text);
+  border: 2px solid var(--clr-text);
 }
 
 .section, .cell {
-  border: 1px solid var(--color-text);
+  border: 1px solid var(--clr-text);
 }
 
-/* ||||||||| Doku Layout ||||||||| */
-* {
-  margin: 0;
-}
-
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex: 1;
-}
-
-.vertical {
-  flex-direction: column;
-}
-
+/* ||||||||| Doku Sizing - widths & heights ||||||||| */
 .stretch {
   width: 100%;
 }
 
-.inflexible {
-  flex: none;
-}
-
-#top {
+.top {
   height: var(--height-top);
 }
 
-#logo {
+.side {
   width: var(--width-nav-side);
-  height: var(--height-top);
 }
 
-#credentials {
-  padding: var(--padding-small);
-  justify-content: flex-end;
-  gap: 20px;
-}
-
-#credentials > input {
-  max-width: 80px;
-}
-
-#bottom {
+.bottom {
   height: calc(100vh - var(--height-top));
 }
 
-#nav-side {
-  height: inherit;
-  width: var(--width-nav-side);
-}
-
-.menu-item {
-  padding: 12px;
-}
-
-#content {
-  height: inherit;
-  gap: var(--gap);
-  box-sizing: border-box;
-  padding: var(--padding-large);
-}
-
-#content > img {
-  flex: auto;
-  height: 80%;
-  width: auto;
-}
-
-#opponent-card {
-  padding: var(--padding-small);
-  width: 240px;
-  border: 1px solid var(--color-text);
-  border-radius: calc(1.5*var(--padding-small));
-}
-
-#opponent-card > h3 {
-  padding: inherit;
-  margin: -12px -12px 0 -12px;
-  border-top-left-radius: inherit;
-  border-top-right-radius: inherit;
-}
-
-.user {
-  padding: inherit;
-  justify-content: space-between;
+#credentials > input {
+  max-width: 72px;
 }
 
 .user > img {
@@ -159,16 +96,88 @@ a {
   height: auto;
 }
 
-#completion {
-  box-sizing: border-box;
-  padding: inherit;
-  gap: 6px;
-  border-radius: calc(0.5*var(--padding-small));
+.cell {
+  width: 48px;
+  height: 48px;
+}
+
+#opponent-card {
+  width: 240px;
 }
 
 .bar {
   height: 12px;
+}
+
+/* ||||||||| Doku Paddings & Margins ||||||||| */
+.pad-sm {
+  padding: var(--pad-sm);
+}
+
+.pad-lg {
+  padding: var(--pad-lg);
+}
+
+#opponent-card > h3 {
+  margin: -12px -12px 0 -12px;
+}
+
+/* ||||||||| Doku Borders ||||||||| */
+#opponent-card {
+  border: 1px solid var(--clr-text);
+  border-radius: calc(1.5*var(--pad-sm));
+}
+
+#opponent-card > h3 {
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+
+#completion {
+  border-radius: calc(0.5*var(--pad-sm));
+}
+
+.bar {
   border-radius: 12px;
+}
+
+/* ||||||||| Doku Layout ||||||||| */
+* {
+  margin: 0;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.vert {
+  flex-direction: column;
+}
+
+.noflex {
+  flex: none;
+}
+
+#credentials {
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+#content {
+  gap: var(--gap);
+  box-sizing: border-box;
+}
+
+.user {
+  justify-content: space-between;
+}
+
+#completion {
+  box-sizing: border-box;
+  gap: 6px;
 }
 
 .bar.outer {
@@ -179,17 +188,10 @@ a {
   width: 69%;
 }
 
-/* ||||||||| Doku Board ||||||||| */
-
 #board, .section {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-}
-
-.cell {
-  width: 48px;
-  height: 48px;
 }
 
 /* ||||||||| Animations ||||||||| */
