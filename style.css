@@ -12,7 +12,7 @@
   --height-top: 6vh;
 }
 
-/* Font  */
+/* ||||||||| Doku Fonts - family, size, weight, align ||||||||| */
 * {
   font-family: -apple-system, "Helvetica", "sans-serif";
 }
@@ -24,7 +24,6 @@ a {
 #logo {
   font-size: 42px;
   font-family: 'Georgia';
-  text-align: center;
 }
 
 .menu-item {
@@ -32,16 +31,8 @@ a {
   text-align: center;
 }
 
-#completion > p {
-  font-weight: bold;
-}
-
-/* Color Scheme */
+/* ||||||||| Doku Color Schemes - text, background, shadows ||||||||| */
 * {
-  color: var(--color-text);
-}
-
-a {
   color: var(--color-text);
 }
 
@@ -74,7 +65,7 @@ a {
   border: 1px solid var(--color-text);
 }
 
-/* Layout */
+/* ||||||||| Doku Layout ||||||||| */
 * {
   margin: 0;
 }
@@ -190,12 +181,11 @@ a {
 #board {
   flex: initial;
   display: grid;
-  grid-template-columns: ;
   width: 529px;
   height: 529px;
 }
 
-/* Other */
+/* ||||||||| Miscellaneous Styling ||||||||| */
 .menu-item {
   transition: background-color 150ms;
 }
