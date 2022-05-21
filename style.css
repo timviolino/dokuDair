@@ -7,7 +7,6 @@
   --clr-text: rgb(69, 69, 69);
   --pad-sm: 12px;
   --pad-lg: 48px;
-  --gap: 50px;
   --width-nav-side: 16vw;
   --height-top: 6vh;
 }
@@ -70,15 +69,21 @@ a {
   border: 1px solid var(--clr-text);
 }
 
-/* ||||||||| Doku Paddings & Margins ||||||||| */
+/* ||||||||| Doku Paddings, Gaps, & Margins ||||||||| */
 .pad-sm {
-  box-sizing: border-box;
   padding: var(--pad-sm);
 }
 
 .pad-lg {
-  box-sizing: border-box;
   padding: var(--pad-lg);
+}
+
+.gap-sm {
+  gap: var(--pad-sm);
+}
+
+.gap-lg {
+  gap: var(--pad-lg);
 }
 
 #opponent-card > h3 {
@@ -86,7 +91,11 @@ a {
   margin: -12px -12px 0px -12px;
 }
 
-/* ||||||||| Doku Magic Numbers - widths & heights ||||||||| */
+/* ||||||||| Doku Sizing - widths & heights ||||||||| */
+* {
+  box-sizing: border-box;
+}
+
 .stretch {
   width: 100%;
 }
@@ -170,19 +179,10 @@ a {
 
 #credentials {
   justify-content: flex-end;
-  gap: 20px;
-}
-
-#content {
-  gap: var(--gap);
 }
 
 .user {
   justify-content: space-between;
-}
-
-#completion {
-  gap: 6px;
 }
 
 .bar.outer {
