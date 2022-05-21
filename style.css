@@ -70,7 +70,23 @@ a {
   border: 1px solid var(--clr-text);
 }
 
-/* ||||||||| Doku Sizing - widths & heights ||||||||| */
+/* ||||||||| Doku Paddings & Margins ||||||||| */
+.pad-sm {
+  box-sizing: border-box;
+  padding: var(--pad-sm);
+}
+
+.pad-lg {
+  box-sizing: border-box;
+  padding: var(--pad-lg);
+}
+
+#opponent-card > h3 {
+  width: calc(100% + 2 * var(--pad-sm));
+  margin: -12px -12px 0px -12px;
+}
+
+/* ||||||||| Doku Magic Numbers - widths & heights ||||||||| */
 .stretch {
   width: 100%;
 }
@@ -102,24 +118,15 @@ a {
 }
 
 #opponent-card {
-  width: 240px;
+  width: 288px;
 }
 
 .bar {
   height: 12px;
 }
 
-/* ||||||||| Doku Paddings & Margins ||||||||| */
-.pad-sm {
-  padding: var(--pad-sm);
-}
-
-.pad-lg {
-  padding: var(--pad-lg);
-}
-
-#opponent-card > h3 {
-  margin: -12px -12px 0 -12px;
+.bar.inner {
+  width: 69%;
 }
 
 /* ||||||||| Doku Borders ||||||||| */
@@ -168,7 +175,6 @@ a {
 
 #content {
   gap: var(--gap);
-  box-sizing: border-box;
 }
 
 .user {
@@ -176,16 +182,11 @@ a {
 }
 
 #completion {
-  box-sizing: border-box;
   gap: 6px;
 }
 
 .bar.outer {
   justify-content: flex-start;
-}
-
-.bar.inner {
-  width: 69%;
 }
 
 #board, .section {
