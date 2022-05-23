@@ -25,12 +25,13 @@ a {
   font-family: 'Georgia';
 }
 
-.menu-item > a {
+.menu-item {
   font-size: 24px;
   text-align: center;
 }
 
-.cell > p {
+.cell > input {
+  text-align: center;
   font-size: 24px;
 }
 
@@ -164,6 +165,11 @@ body {
   height: 92%;
 }
 
+.cell > input {
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+}
+
 /* ||||||||| Doku Borders ||||||||| */
 #opponent-card {
   border: 1px solid var(--clr-text);
@@ -181,6 +187,10 @@ body {
 
 .bar {
   border-radius: 12px;
+}
+
+.cell > input {
+  border: 0;
 }
 
 /* ||||||||| Doku Layout ||||||||| */
@@ -224,13 +234,4 @@ body {
 /* ||||||||| Animations ||||||||| */
 .menu-item {
   transition: background-color 150ms;
-}
-
-/* ||||||||| Number Wheel ||||||||| */
-.cell > input {
-  width: calc(100% - 2px);
-  height: calc(100% - 2px);
-  border: 0;
-  text-align: center;
-  font-size: 24px;
 }
