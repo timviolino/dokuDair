@@ -5,10 +5,9 @@
   --clr-med: rgb(250, 210, 210);
   --clr-dark: rgb(250, 180, 180);
   --clr-text: rgb(69, 69, 69);
-  --pad-sm: 12px;
-  --pad-lg: 48px;
-  --width-nav-side: 16vw;
-  --height-top: 6vh;
+  --dim-sm: 12px;
+  --dim-med: 48px;
+  --dim-lg: 192px;
 }
 
 /* ||||||||| Doku Fonts - family, size, weight, align ||||||||| */
@@ -71,23 +70,23 @@ a {
 
 /* ||||||||| Doku Paddings, Gaps, & Margins ||||||||| */
 .pad-sm {
-  padding: var(--pad-sm);
+  padding: var(--dim-sm);
 }
 
-.pad-lg {
-  padding: var(--pad-lg);
+.pad-med {
+  padding: var(--dim-med);
 }
 
 .gap-sm {
-  gap: var(--pad-sm);
+  gap: var(--dim-sm);
 }
 
-.gap-lg {
-  gap: var(--pad-lg);
+.gap-med {
+  gap: var(--dim-med);
 }
 
 #opponent-card > h3 {
-  width: calc(100% + 2 * var(--pad-sm));
+  width: calc(100% + 2 * var(--dim-sm));
   margin: -12px -12px 0px -12px;
 }
 
@@ -96,20 +95,28 @@ a {
   box-sizing: border-box;
 }
 
+body {
+  height: 100vh;
+}
+
 .stretch {
   width: 100%;
 }
 
+.vert-stretch {
+  height: 100%;
+}
+
 .top {
-  height: var(--height-top);
+  height: var(--dim-med);
 }
 
 .side {
-  width: var(--width-nav-side);
+  width: var(--dim-lg);
 }
 
 .bottom {
-  height: calc(100vh - var(--height-top));
+  height: calc(100vh - var(--dim-med));
 }
 
 #credentials > input {
@@ -122,8 +129,8 @@ a {
 }
 
 .cell {
-  width: 48px;
-  height: 48px;
+  width: 4vw;
+  height: 4vw;
 }
 
 #opponent-card {
@@ -131,7 +138,7 @@ a {
 }
 
 .bar {
-  height: 12px;
+  height: var(--dim-sm);
 }
 
 .bar.inner {
@@ -141,7 +148,7 @@ a {
 /* ||||||||| Doku Borders ||||||||| */
 #opponent-card {
   border: 1px solid var(--clr-text);
-  border-radius: calc(1.5*var(--pad-sm));
+  border-radius: calc(1.5*var(--dim-sm));
 }
 
 #opponent-card > h3 {
@@ -150,7 +157,7 @@ a {
 }
 
 #completion {
-  border-radius: calc(0.5*var(--pad-sm));
+  border-radius: calc(0.5*var(--dim-sm));
 }
 
 .bar {
@@ -162,7 +169,7 @@ a {
   margin: 0;
 }
 
-.box {
+.flex {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -173,20 +180,20 @@ a {
   flex-direction: column;
 }
 
-.noflex {
+.nogrow {
   flex: none;
 }
 
-#credentials {
-  justify-content: flex-end;
-}
-
-.user {
+.j-even {
   justify-content: space-between;
 }
 
-.bar.outer {
+.j-left {
   justify-content: flex-start;
+}
+
+.j-right {
+  justify-content: flex-end;
 }
 
 #board, .section {
