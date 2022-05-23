@@ -5,22 +5,33 @@
     <title>DokuDair</title>
     <link rel="stylesheet" href="../style.css">
   </head>
-  <body class="box vert">
-    <div class="box stretch clr-med top">
-      <a id="logo" class="box noflex clr-dark top side"  href="../index.html">DokuDair</a>
-      <div id="credentials" class="box pad-sm gap-sm">
+  <body class="flex vert no-grow">
+    <div class="flex stretch clr-med top no-grow">
+      <a id="logo" class="flex no-grow clr-dark top side"  href="../index.html">DokuDair</a>
+      <div id="credentials" class="flex pad-sm gap-sm j-end">
         <input placeholder="Username">
         <input placeholder="Password">
         <button>Login</button>
       </div>
     </div>
-    <div class="box stretch noflex bottom">
-      <div class="box vert noflex clr-light side bottom">
-        <a class="menu-item stretch pad-sm" href="about.html">about</a>
-        <a class="menu-item stretch pad-sm" href="history.html">history</a>
-        <a class="menu-item stretch pad-sm" href="chat.html">chat</a>
+    <div class="flex stretch no-grow bottom">
+      <div class="flex vert no-grow clr-light side vert-stretch">
+        <div class="flex menu-item stretch pad-2 gap-2 no-grow j-start">
+          <img src="https://raw.githubusercontent.com/eirikmadland/notion-icons/master/v5/icon4/mi-info.svg" alt="i">
+          <a href="wiki.html">wiki</a>
+        </div>
+        <div class="flex menu-item stretch pad-2 gap-2 no-grow j-start">
+          <img src="https://raw.githubusercontent.com/eirikmadland/notion-icons/master/v5/icon4/ul-graph-bar.svg" alt="i">
+          <a href="stats.html">stats</a>
+        </div>
+        <div class="flex menu-item stretch pad-2 gap-2 no-grow j-start">
+          <img src="https://raw.githubusercontent.com/eirikmadland/notion-icons/master/v5/icon4/mi-chat.svg" alt="i">
+          <a href="chat.html">chat</a>
+        </div>
       </div>
-      <div id="content" class="box bottom pad-lg gap-lg">
+      <div id="content" class="flex vert-stretch">
+        <img class="placeholder" src="https://previews.123rf.com/images/ppbig/ppbig1612/ppbig161200318/70197928-hand-drawn-graph-and-chart-icons.jpg" alt="stats">
+      </div>
     </div>
   </body>
 </html>

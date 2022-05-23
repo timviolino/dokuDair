@@ -5,9 +5,10 @@
   --clr-med: rgb(250, 210, 210);
   --clr-dark: rgb(250, 180, 180);
   --clr-text: rgb(69, 69, 69);
-  --dim-sm: 12px;
-  --dim-med: 48px;
-  --dim-lg: 192px;
+  --dim-1: 12px;
+  --dim-2: 24px;
+  --dim-4: 48px;
+  --dim-16: 192px;
 }
 
 /* ||||||||| Doku Fonts - family, size, weight, align ||||||||| */
@@ -24,7 +25,7 @@ a {
   font-family: 'Georgia';
 }
 
-.menu-item {
+.menu-item > a {
   font-size: 24px;
   text-align: center;
 }
@@ -43,7 +44,7 @@ a {
 }
 
 .clr-light,
-.cell:hover {
+.cell > input:hover {
   background-color: var(--clr-light);
 }
 
@@ -70,23 +71,31 @@ a {
 
 /* ||||||||| Doku Paddings, Gaps, & Margins ||||||||| */
 .pad-sm {
-  padding: var(--dim-sm);
+  padding: var(--dim-1);
+}
+
+.pad-2 {
+  padding: var(--dim-2);
 }
 
 .pad-med {
-  padding: var(--dim-med);
+  padding: var(--dim-4);
 }
 
 .gap-sm {
-  gap: var(--dim-sm);
+  gap: var(--dim-1);
+}
+
+.gap-2 {
+  gap: var(--dim-2);
 }
 
 .gap-med {
-  gap: var(--dim-med);
+  gap: var(--dim-4);
 }
 
 #opponent-card > h3 {
-  width: calc(100% + 2 * var(--dim-sm));
+  width: calc(100% + 2 * var(--dim-1));
   margin: -12px -12px 0px -12px;
 }
 
@@ -108,19 +117,24 @@ body {
 }
 
 .top {
-  height: var(--dim-med);
+  height: var(--dim-4);
 }
 
 .side {
-  width: var(--dim-lg);
+  width: var(--dim-16);
 }
 
 .bottom {
-  height: calc(100vh - var(--dim-med));
+  height: calc(100vh - var(--dim-4));
 }
 
 #credentials > input {
   max-width: 72px;
+}
+
+.menu-item > img {
+  width: 36px;
+  height: auto;
 }
 
 .user > img {
@@ -138,17 +152,22 @@ body {
 }
 
 .bar {
-  height: var(--dim-sm);
+  height: var(--dim-1);
 }
 
 .bar.inner {
   width: 69%;
 }
 
+.placeholder {
+  width: auto;
+  height: 92%;
+}
+
 /* ||||||||| Doku Borders ||||||||| */
 #opponent-card {
   border: 1px solid var(--clr-text);
-  border-radius: calc(1.5*var(--dim-sm));
+  border-radius: calc(1.5*var(--dim-1));
 }
 
 #opponent-card > h3 {
@@ -157,7 +176,7 @@ body {
 }
 
 #completion {
-  border-radius: calc(0.5*var(--dim-sm));
+  border-radius: calc(0.5*var(--dim-1));
 }
 
 .bar {
@@ -180,7 +199,7 @@ body {
   flex-direction: column;
 }
 
-.nogrow {
+.no-grow {
   flex: none;
 }
 
@@ -188,11 +207,11 @@ body {
   justify-content: space-between;
 }
 
-.j-left {
+.j-start {
   justify-content: flex-start;
 }
 
-.j-right {
+.j-end {
   justify-content: flex-end;
 }
 
@@ -205,4 +224,13 @@ body {
 /* ||||||||| Animations ||||||||| */
 .menu-item {
   transition: background-color 150ms;
+}
+
+/* ||||||||| Number Wheel ||||||||| */
+.cell > input {
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  border: 0;
+  text-align: center;
+  font-size: 24px;
 }
