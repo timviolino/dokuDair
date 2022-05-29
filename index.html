@@ -1,157 +1,59 @@
 <!DOCTYPE html>
-<html>
-  <head lang="en">
-    <meta charset="UTF-8">
-    <title>DokuDair</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body class="flex vert no-grow">
-    <div class="flex stretch clr-med top no-grow">
-      <a id="logo" class="flex no-grow clr-dark top side"  href="index.html">DokuDair</a>
-      <div id="credentials" class="flex pad-sm gap-sm j-end">
-        <input placeholder="Username">
-        <input placeholder="Password">
-        <button>Login</button>
-      </div>
+<html lang="en">
+<head>
+  <title>DokuDair</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="flex vert no-grow">
+  <div class="flex stretch clr-med top no-grow">
+    <a id="logo" class="flex no-grow clr-dark top side"  href="index.html">DokuDair</a>
+    <div id="credentials" class="flex pad-sm gap-sm j-end">
+      <input placeholder="Username">
+      <input placeholder="Password">
+      <button>Login</button>
     </div>
-    <div class="flex stretch no-grow bottom">
-      <div class="flex vert no-grow clr-light side vert-stretch">
-        <a href="./pages/wiki.html" class="flex menu-item stretch pad-2 gap-2 no-grow j-start">
-          <img src="https://raw.githubusercontent.com/eirikmadland/notion-icons/master/v5/icon4/mi-info.svg" alt="i">
-          wiki
-        </a>
-        <a href="./pages/stats.html" class="flex menu-item stretch pad-2 gap-2 no-grow j-start">
-          <img src="https://raw.githubusercontent.com/eirikmadland/notion-icons/master/v5/icon4/ul-graph-bar.svg" alt="s">
-          stats
-        </a>
-        <a href="./pages/chat.html" class="flex menu-item stretch pad-2 gap-2 no-grow j-start">
-          <img src="https://raw.githubusercontent.com/eirikmadland/notion-icons/master/v5/icon4/mi-chat.svg" alt="c">
-          chat
-        </a>
-      </div>
-      <div id="content" class="flex vert-stretch pad-med gap-med">
-        <div class="flex vert gap-sm no-grow">
-          <div id="board">
-            <div class="section">
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-            </div>
-            <div class="section">
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-            </div>
-            <div class="section">
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-            </div>
-            <div class="section">
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-            </div>
-            <div class="section">
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-            </div>
-            <div class="section">
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-            </div>
-            <div class="section">
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-            </div>
-            <div class="section">
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-            </div>
-            <div class="section">
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-              <div class="cell flex"><input></input></div>
-            </div>
-          </div>
-          <div class="flex gap-med">
-            <button id="clear-btn">Clear</button>
-            <button>New Puzzle</button>
-          </div>
+  </div>
+  <div class="flex stretch no-grow bottom">
+    <div class="flex vert no-grow clr-light side vert-stretch">
+      <a href="./pages/wiki.html" class="flex menu-item stretch pad-2 gap-2 no-grow j-start">
+        <img id="mi-info" alt="i">
+        wiki
+      </a>
+      <a href="./pages/stats.html" class="flex menu-item stretch pad-2 gap-2 no-grow j-start">
+        <img id="ul-graph-bar" alt="s">
+        stats
+      </a>
+      <a href="./pages/chat.html" class="flex menu-item stretch pad-2 gap-2 no-grow j-start">
+        <img id="mi-chat" alt="c">
+        chat
+      </a>
+    </div>
+    <div id="content" class="flex vert-stretch pad-med gap-med">
+      <div class="flex vert gap-sm no-grow">
+        <div id="board"></div>
+        <div class="flex gap-med">
+          <button id="clear-btn">Clear</button>
+          <button>New Puzzle</button>
         </div>
-        <div id="opponent-card" class="flex vert no-grow clr-light pad-sm">
-          <h3 class="clr-med pad-sm">Opponent</h3>
-          <div class="flex stretch user j-even pad-sm">
-            <img src="./img/charlie.png" alt="User">
-            <p> Xx_cookielover_xX</p>
-          </div>
-          <div id="completion" class="flex stretch clr-med pad-sm gap-sm">
-            <strong class="clr-med">69%</strong>
-            <div class="bar j-start flex clr-dark">
-              <div class="bar inner"></div>
-            </div>
+      </div>
+      <div id="opponent-card" class="flex vert no-grow clr-light pad-sm">
+        <h3 class="clr-med pad-sm">Opponent</h3>
+        <div class="flex stretch user j-even pad-sm">
+          <img src="./img/charlie.png" alt="User">
+          <p> Xx_cookielover_xX</p>
+        </div>
+        <div id="completion" class="flex stretch clr-med pad-sm gap-sm">
+          <strong class="clr-med">69%</strong>
+          <div class="bar j-start flex clr-dark">
+            <div class="bar inner"></div>
           </div>
         </div>
       </div>
     </div>
-    <script src="main.js"></script>
-  </body>
+  </div>
+</body>
 </html>
