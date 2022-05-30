@@ -14,6 +14,7 @@
 /* ||||||||| Doku Fonts - family, size, weight, align ||||||||| */
 * {
   font-family: -apple-system, "Helvetica", "sans-serif";
+  text-align: center;
 }
 
 a {
@@ -25,14 +26,8 @@ a {
   font-family: 'Georgia';
 }
 
-.menu-item {
-  font-size: 24px;
-  text-align: center;
-}
-
-.cell > input {
-  text-align: center;
-  font-size: 24px;
+.font-2 {
+  font-size: 2rem;
 }
 
 /* ||||||||| Doku Color Schemes - text, background, shadows ||||||||| */
@@ -50,7 +45,8 @@ a {
 }
 
 .clr-med,
-.menu-item:hover {
+.menu-item:hover,
+button:hover {
   background-color: var(--clr-med);
 }
 
@@ -71,6 +67,14 @@ a {
 }
 
 /* ||||||||| Doku Paddings, Gaps, & Margins ||||||||| */
+* {
+  margin: 0;
+}
+
+.pad-0 {
+  padding: 6px;
+}
+
 .pad-sm {
   padding: var(--dim-1);
 }
@@ -130,16 +134,16 @@ body {
 }
 
 #credentials > input {
-  max-width: 72px;
+  max-width: 6rem;
 }
 
 .menu-item > img {
-  width: 36px;
+  width: 3rem;
   height: auto;
 }
 
 .user > img {
-  width: 72px;
+  width: 5rem;
   height: auto;
 }
 
@@ -179,25 +183,22 @@ body {
 #opponent-card > h3 {
   border-top-left-radius: inherit;
   border-top-right-radius: inherit;
+  text-align: left;
 }
 
 #completion {
   border-radius: calc(0.5*var(--dim-1));
 }
 
-.bar {
-  border-radius: 12px;
-}
-
 .cell > input {
   border: 0;
 }
 
-/* ||||||||| Doku Layout ||||||||| */
-* {
-  margin: 0;
+.fillet {
+  border-radius: 12px;
 }
 
+/* ||||||||| Doku Layout ||||||||| */
 .flex {
   display: flex;
   align-items: center;
