@@ -175,6 +175,10 @@ body {
 }
 
 /* ||||||||| Doku Borders ||||||||| */
+.fillet {
+  border-radius: 12px;
+}
+
 #opponent-card {
   border: 1px solid var(--clr-text);
   border-radius: calc(1.5*var(--dim-1));
@@ -192,10 +196,6 @@ body {
 
 .cell > input {
   border: 0;
-}
-
-.fillet {
-  border-radius: 12px;
 }
 
 /* ||||||||| Doku Layout ||||||||| */
